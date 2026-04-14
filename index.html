@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plano de Ação — Instituto Janeisa Narciso · Abr–Ago 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--rose:#C07B84;--rose-dk:#8B4F58;--rose-lt:#F9EDEF;--rose-mid:#E8C4C8;--nude:#F7EDE5;--cream:#FFFAF8;--blush:#FAF0F1;--ink:#1A1010;--ink2:#3D2828;--ink3:#6B4A4A;--muted:#9A7878;--gold:#E8A020;--gold-lt:#FDF4E4;--green:#2D6B3C;--green-lt:#E8F3EB;--teal:#1A8070;--teal-lt:#E1F5F2;--teal-mid:#8DCFC8;--blue:#185FA5;--blue-lt:#E6F1FB;--purple:#6B4FA0;--purple-lt:#EDE8F8;--purple-mid:#C4B0E8;--red:#A32D2D;--red-lt:#FCEBEB;--serif:'Playfair Display',Georgia,serif;--sans:'Inter',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}html{font-size:15px;scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+.cover{background:var(--ink);padding:72px 64px 64px;position:relative;overflow:hidden}
+.cover::before{content:'';position:absolute;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(139,79,88,.22) 0%,transparent 65%);top:-250px;right:-180px}
+.cover::after{content:'';position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(26,128,112,.1) 0%,transparent 65%);bottom:-100px;left:-80px}
+.cover-inner{position:relative;z-index:1}
+.cover-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(192,123,132,.2);border:1px solid rgba(192,123,132,.3);border-radius:100px;padding:7px 16px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--rose-mid);margin-bottom:28px}
+.cover-dot{width:7px;height:7px;border-radius:50%;background:var(--rose)}
+.cover-h1{font-family:var(--serif);font-size:clamp(36px,5vw,64px);font-weight:700;color:white;line-height:1.05;margin-bottom:16px}
+.cover-h1 em{font-style:italic;font-weight:400;color:var(--rose-mid)}
+.cover-sub{font-size:17px;color:rgba(255,255,255,.5);margin-bottom:56px;max-width:560px;line-height:1.7}
+.cover-meta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.08);border-radius:12px;overflow:hidden;margin-bottom:48px}
+.cover-meta-item{background:rgba(255,255,255,.04);padding:20px 24px}
+.cmi-val{font-family:var(--serif);font-size:24px;font-weight:700;color:white;margin-bottom:4px}
+.cmi-lbl{font-size:11px;color:rgba(255,255,255,.4);letter-spacing:.07em;text-transform:uppercase;line-height:1.4}
+.cover-scope{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.scope-item{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:16px 18px;display:flex;align-items:flex-start;gap:12px}
+.scope-icon{font-size:20px;flex-shrink:0;margin-top:1px}
+.scope-title{font-size:13px;font-weight:600;color:white;margin-bottom:3px}
+.scope-desc{font-size:12px;color:rgba(255,255,255,.4);line-height:1.55}
+.cover-sig{margin-top:48px;padding-top:24px;border-top:1px solid rgba(255,255,255,.08);font-size:12px;color:rgba(255,255,255,.25)}
+/* INSS bar */
+.inss-bar{background:#FFF8E6;border-bottom:3px solid var(--gold);padding:16px 64px;display:flex;align-items:flex-start;gap:14px}
+.inss-bar .icon{font-size:22px;flex-shrink:0;margin-top:2px}
+.inss-bar .text{font-size:13px;color:#4A3200;line-height:1.65}
+.inss-bar .text strong{color:#2A1800;font-weight:700}
+/* Parallel band */
+.par-band{background:var(--ink);padding:14px 64px;display:flex;align-items:center;gap:14px}
+.par-band .icon{font-size:18px;flex-shrink:0}
+.par-band .title{font-size:11px;font-weight:700;color:rgba(255,255,255,.75);letter-spacing:.06em;text-transform:uppercase;margin-bottom:3px}
+.par-band .desc{font-size:12px;color:rgba(255,255,255,.38);line-height:1.5}
+/* Legend */
+.legend{background:var(--blush);padding:18px 64px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;border-bottom:1px solid var(--rose-lt)}
+.legend .title{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-right:6px;flex-shrink:0}
+.li{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--ink3)}
+.ld{width:10px;height:10px;border-radius:2px;flex-shrink:0}
+/* Month */
+.ms{padding:0}
+.mh{display:grid;grid-template-columns:auto 1fr}
+.mnum{font-family:var(--serif);font-size:100px;font-weight:700;line-height:1;padding:28px 36px;color:rgba(255,255,255,.12);min-width:180px;display:flex;align-items:center;justify-content:center}
+.mhc{padding:28px 44px 24px 0;display:flex;flex-direction:column;justify-content:center}
+.mtag{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:8px}
+.mh2{font-family:var(--serif);font-size:clamp(24px,3.5vw,40px);font-weight:700;line-height:1.1;margin-bottom:10px}
+.mh2 em{font-style:italic;font-weight:400}
+.mobj{font-size:14px;line-height:1.75;max-width:580px}
+.mgmv{display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:9px 18px;border-radius:100px;font-size:12px;font-weight:700;background:rgba(255,255,255,.12);color:white}
+.mdiv{height:4px}
+/* Month 0 */
+.m0 .mh{background:linear-gradient(135deg,#2A1520 0%,#3D2030 100%)}
+.m0 .mtag{color:rgba(255,255,255,.38)}
+.m0 .mh2{color:white}.m0 .mh2 em{color:rgba(240,190,200,.65)}
+.m0 .mobj{color:rgba(255,255,255,.55)}
+.m0 .mdiv{background:linear-gradient(90deg,#3D2030,#C07B84)}
+/* Month 1 */
+.m1 .mh{background:var(--rose-dk)}
+.m1 .mtag{color:rgba(255,255,255,.45)}
+.m1 .mh2{color:white}.m1 .mh2 em{color:var(--rose-mid)}
+.m1 .mobj{color:rgba(255,255,255,.6)}
+.m1 .mdiv{background:linear-gradient(90deg,var(--rose-dk),var(--rose))}
+/* Month 2 */
+.m2 .mh{background:var(--teal)}
+.m2 .mtag{color:rgba(255,255,255,.45)}
+.m2 .mh2{color:white}.m2 .mh2 em{color:var(--teal-mid)}
+.m2 .mobj{color:rgba(255,255,255,.6)}
+.m2 .mdiv{background:linear-gradient(90deg,var(--teal),var(--teal-mid))}
+/* Month 3 */
+.m3 .mh{background:#7A5320}
+.m3 .mtag{color:rgba(255,255,255,.45)}
+.m3 .mh2{color:white}.m3 .mh2 em{color:#FAC775}
+.m3 .mobj{color:rgba(255,255,255,.6)}
+.m3 .mdiv{background:linear-gradient(90deg,#7A5320,#E8A020)}
+/* Month 4 */
+.m4 .mh{background:var(--purple)}
+.m4 .mtag{color:rgba(255,255,255,.45)}
+.m4 .mh2{color:white}.m4 .mh2 em{color:var(--purple-mid)}
+.m4 .mobj{color:rgba(255,255,255,.6)}
+.m4 .mdiv{background:linear-gradient(90deg,var(--purple),var(--purple-mid))}
+/* Weeks */
+.wc{padding:28px 44px 12px;background:var(--cream)}
+.wr{display:grid;grid-template-columns:108px 1fr;gap:20px;margin-bottom:14px;align-items:start}
+.wl{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:13px;text-align:right;line-height:1.4}
+.wl .wd{font-size:10px;margin-top:3px}
+.wts{display:flex;flex-direction:column;gap:8px}
+/* Tasks */
+.t{border-radius:8px;padding:12px 16px;display:flex;align-items:flex-start;gap:12px;border:1px solid transparent}
+.ti{font-size:16px;flex-shrink:0;margin-top:1px}
+.tc{flex:1}
+.tt{font-size:14px;font-weight:600;margin-bottom:2px;line-height:1.3}
+.td{font-size:12px;color:var(--ink3);line-height:1.6}
+.tgs{display:flex;gap:5px;flex-wrap:wrap;margin-top:5px}
+.tg{font-size:10px;font-weight:700;padding:2px 7px;border-radius:100px;letter-spacing:.05em;text-transform:uppercase}
+.tg-l{background:#FCEBEB;color:#A32D2D}
+.tg-c{background:var(--rose-lt);color:var(--rose-dk)}
+.tg-i{background:var(--green-lt);color:var(--green)}
+.tg-m{background:var(--blue-lt);color:var(--blue)}
+.tg-t{background:var(--gold-lt);color:#7A5000}
+.tg-tf{background:#FFF3E0;color:#7A4000;border:1px solid rgba(232,160,32,.28)}
+.tg-p{background:var(--purple-lt);color:var(--purple)}
+.tg-d{background:#F0F0ED;color:#888}
+/* Task styles */
+.t.launch{background:#FFF4F4;border-color:#F5BFBF}.t.launch .tt{color:#A32D2D}
+.t.internal{background:var(--green-lt);border-color:#B5D9C0}.t.internal .tt{color:var(--green)}
+.t.content{background:var(--rose-lt);border-color:var(--rose-mid)}.t.content .tt{color:var(--rose-dk)}
+.t.mgmt{background:var(--blue-lt);border-color:#B8D4F2}.t.mgmt .tt{color:var(--blue)}
+.t.traffic{background:var(--gold-lt);border-color:rgba(232,160,32,.3)}.t.traffic .tt{color:#7A5000}
+.t.tcold{background:#FFF9F0;border-color:rgba(232,160,32,.22)}.t.tcold .tt{color:#6B4800}
+.t.copy{background:var(--purple-lt);border-color:var(--purple-mid)}.t.copy .tt{color:var(--purple)}
+.t.ms{background:var(--ink);border-color:rgba(255,255,255,.1)}.t.ms .tt{color:white}.t.ms .td{color:rgba(255,255,255,.5)}
+.t.done{background:#F7F7F5;border-color:#E2E0DA;opacity:.65}.t.done .tt{color:#999;text-decoration:line-through}.t.done .td{color:#BBB}
+.t.inss{background:#FFF8E6;border-color:#F0C050;border-width:2px}.t.inss .tt{color:#5A3800}
+/* Funnel */
+.fn-sec{padding:48px 64px;background:var(--nude)}
+.fn{display:flex;gap:0;border-radius:10px;overflow:hidden;margin-top:24px}
+.fs{flex:1;padding:22px 18px}
+.fa{width:24px;background:rgba(0,0,0,.06);display:flex;align-items:center;justify-content:center;font-size:13px;color:rgba(255,255,255,.4);flex-shrink:0}
+.fs.f1{background:var(--rose-lt);border:1px solid var(--rose-mid);border-radius:10px 0 0 10px}
+.fs.f2{background:var(--rose-mid)}
+.fs.f3{background:var(--rose)}
+.fs.f4{background:var(--rose-dk);border-radius:0 10px 10px 0}
+.fsl{font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;margin-bottom:6px}
+.f1 .fsl,.f2 .fsl{color:var(--rose-dk)}.f3 .fsl,.f4 .fsl{color:rgba(255,255,255,.55)}
+.fsn{font-family:var(--serif);font-size:16px;font-weight:700;margin-bottom:4px;line-height:1.2}
+.f1 .fsn,.f2 .fsn{color:var(--ink)}.f3 .fsn,.f4 .fsn{color:white}
+.fsp{font-size:13px;font-weight:700;margin-bottom:4px}
+.f1 .fsp{color:var(--muted)}.f2 .fsp{color:var(--ink2)}.f3 .fsp,.f4 .fsp{color:rgba(255,255,255,.9)}
+.fsd{font-size:11px;line-height:1.6}
+.f1 .fsd{color:var(--muted)}.f2 .fsd{color:var(--ink3)}.f3 .fsd,.f4 .fsd{color:rgba(255,255,255,.6)}
+.fsb{display:inline-block;margin-top:7px;font-size:9px;font-weight:700;padding:2px 7px;border-radius:100px;background:rgba(0,0,0,.1);letter-spacing:.06em;text-transform:uppercase}
+.f1 .fsb,.f2 .fsb{color:var(--rose-dk)}.f3 .fsb,.f4 .fsb{color:rgba(255,255,255,.65)}
+/* Totals */
+.tot{background:var(--ink);padding:52px 64px}
+.tg4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:36px}
+.tc2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.totcard{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:22px 18px;text-align:center}
+.tv{font-family:var(--serif);font-size:28px;font-weight:700;color:white;margin-bottom:5px}
+.tl{font-size:11px;color:rgba(255,255,255,.32);letter-spacing:.08em;text-transform:uppercase;line-height:1.5}
+.modcard{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:22px}
+.modtitle{font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:10px}
+.mi{display:flex;align-items:flex-start;gap:9px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.07);font-size:13px}
+.mi:last-child{border-bottom:none}
+.md{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:5px}
+.mit{color:white;font-weight:500;margin-bottom:2px;line-height:1.3}
+.mid{color:rgba(255,255,255,.38);font-size:12px;line-height:1.5}
+/* Responsive */
+@media(max-width:768px){
+.cover,.tot,.fn-sec{padding:36px 20px}
+.inss-bar,.par-band,.legend,.wc{padding-left:20px;padding-right:20px}
+.cover-meta-grid{grid-template-columns:1fr 1fr}.cover-scope{grid-template-columns:1fr}
+.mnum{font-size:60px;min-width:90px;padding:18px 12px}
+.mhc{padding:18px 18px 14px 6px}
+.wr{grid-template-columns:68px 1fr;gap:10px}
+.tg4{grid-template-columns:1fr 1fr}.tc2{grid-template-columns:1fr}
+.fn{flex-direction:column;border-radius:10px}.fs.f1{border-radius:10px 10px 0 0}.fs.f4{border-radius:0 0 10px 10px}.fa{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="cover"><div class="cover-inner">
+  <div class="cover-badge"><div class="cover-dot"></div>Operação de validação · Abr–Ago 2026</div>
+  <h1 class="cover-h1">Plano de Ação<br><em>4 Meses.</em></h1>
+  <p class="cover-sub">1 lançamento pago · 4 ações internas · tráfego frio perpétuo nos produtos de entrada · assessoria de conteúdo · estruturação de gestão. Abertura do carrinho casada com o calendário INSS e virada de fatura.</p>
+  <div class="cover-meta-grid">
+    <div class="cover-meta-item"><div class="cmi-val">2–5/Jun</div><div class="cmi-lbl">Abertura do carrinho<br>pós-INSS 13º</div></div>
+    <div class="cover-meta-item"><div class="cmi-val">~45 dias</div><div class="cmi-lbl">Aquecimento antes<br>do lançamento</div></div>
+    <div class="cover-meta-item"><div class="cmi-val">4 ações</div><div class="cmi-lbl">Internas · 1/mês<br>base de compradores</div></div>
+    <div class="cover-meta-item"><div class="cmi-val">3 níveis</div><div class="cmi-lbl">Projeção de faturamento<br>baixa · normal · super meta</div></div>
+  </div>
+  <div class="cover-scope">
+    <div class="scope-item"><div class="scope-icon">🚀</div><div><div class="scope-title">Gestão de tráfego</div><div class="scope-desc">Tráfego frio perpétuo para produtos de entrada + captação paga dos lançamentos</div></div></div>
+    <div class="scope-item"><div class="scope-icon">✍️</div><div><div class="scope-title">Copy e estratégia</div><div class="scope-desc">Páginas de vendas · e-mails · WhatsApp · scripts de stories · anúncios</div></div></div>
+    <div class="scope-item"><div class="scope-icon">📱</div><div><div class="scope-title">Assessoria de conteúdo</div><div class="scope-desc">Calendário editorial mensal · pautas semanais alinhadas aos lançamentos</div></div></div>
+    <div class="scope-item"><div class="scope-icon">📊</div><div><div class="scope-title">Estruturação de gestão</div><div class="scope-desc">Dashboards · relatórios mensais · processos operacionais</div></div></div>
+  </div>
+  <div class="cover-sig">Elaborado por Samuel Matias e João Vitor Leal · Instituto Janeisa Narciso · 14 de abril de 2026</div>
+</div></div>
+
+<!-- INSS CALLOUT -->
+<div class="inss-bar">
+  <div class="icon">📅</div>
+  <div class="text"><strong>Por que o carrinho abre em 2–5 de junho?</strong> A 2ª parcela do 13º do INSS é depositada entre 25/Mai–8/Jun (até 1 salário mínimo) e 1–8/Jun (acima do mínimo). O pagamento regular de junho começa apenas em 24/Jun. A janela 2–5/Jun é o momento em que o público já recebeu o 13º e a fatura do cartão acabou de virar — máximo poder de compra do mês para quem parcela em 12x.</div>
+</div>
+
+<!-- PARALLEL BAND -->
+<div class="par-band">
+  <div class="icon">📡</div>
+  <div>
+    <div class="title">Em paralelo durante todos os 4 meses — Tráfego frio · produtos de entrada · venda direta perpétua</div>
+    <div class="desc">Campanha Meta Ads rodando continuamente para "Minha Primeira Peça" (R$ 37) e cursos avulsos (R$ 37–97) · R$ 30–50/dia · objetivo: novos compradores na base todo mês · essa campanha não para entre lançamentos</div>
+  </div>
+</div>
+
+<!-- LEGEND -->
+<div class="legend">
+  <span class="title">Legenda:</span>
+  <div class="li"><div class="ld" style="background:#A32D2D"></div>Lançamento</div>
+  <div class="li"><div class="ld" style="background:#2D6B3C"></div>Ação interna</div>
+  <div class="li"><div class="ld" style="background:#C07B84"></div>Conteúdo</div>
+  <div class="li"><div class="ld" style="background:#185FA5"></div>Gestão</div>
+  <div class="li"><div class="ld" style="background:#E8A020"></div>Tráfego lançamento</div>
+  <div class="li"><div class="ld" style="background:#FFF3E0;border:1px solid #E8A020"></div>Tráfego frio perpétuo</div>
+  <div class="li"><div class="ld" style="background:#6B4FA0"></div>Copy</div>
+  <div class="li"><div class="ld" style="background:#1A1010"></div>Marco</div>
+  <div class="li"><div class="ld" style="background:#E2E0DA"></div>Já feito ✓</div>
+</div>
+
+
+<!-- ══ MÊS 0 — ABRIL: PREPARAÇÃO ══ -->
+<div class="ms m0">
+  <div class="mh">
+    <div class="mnum">↺</div>
+    <div class="mhc">
+      <div class="mtag">Preparação · 14–30 Abr 2026 · em andamento</div>
+      <h2 class="mh2">Fundação já feita<br><em>+ Gravação do curso.</em></h2>
+      <p class="mobj">Diagnóstico e estruturação da base Hotmart já concluídos. Abril é o mês de gravação do curso pela Janeisa, início do tráfego frio perpétuo nos produtos de entrada e ação interna na base de compradores únicos.</p>
+      <div class="mgmv">Sem meta de lançamento — preparação e gravação</div>
+    </div>
+  </div>
+  <div class="mdiv"></div>
+  <div class="wc">
+
+    <div class="wr">
+      <div class="wl">Semana 1<div class="wd">14–20 Abr</div></div>
+      <div class="wts">
+        <div class="t done"><div class="ti">✅</div><div class="tc">
+          <div class="tt">Diagnóstico completo + análise histórica de 6 anos (Hotmart)</div>
+          <div class="td">Concluído — 15.387 transações analisadas · portfólio mapeado · dados prontos</div>
+          <div class="tgs"><span class="tg tg-d">concluído</span></div>
+        </div></div>
+        <div class="t done"><div class="ti">✅</div><div class="tc">
+          <div class="tt">Estruturação da base Hotmart · planilha dos 1.602 compradores únicos</div>
+          <div class="td">Concluído — segmentados por prioridade, produto e próxima oferta sugerida</div>
+          <div class="tgs"><span class="tg tg-d">concluído</span></div>
+        </div></div>
+        <div class="t tcold"><div class="ti">📡</div><div class="tc">
+          <div class="tt">Ativar tráfego frio perpétuo — produtos de entrada</div>
+          <div class="td">Campanha Meta Ads de venda direta para "Minha Primeira Peça" (R$ 37) e cursos avulsos · R$ 30–50/dia · campanha permanente, não para entre lançamentos · público frio: interesses costura, modelagem, artesanato</div>
+          <div class="tgs"><span class="tg tg-tf">tráfego frio</span><span class="tg tg-t">perpétuo</span></div>
+        </div></div>
+        <div class="t content"><div class="ti">📅</div><div class="tc">
+          <div class="tt">Calendário editorial Abril + briefings de conteúdo semanal</div>
+          <div class="td">Pautas para Reels e Stories · tema: o método MCF, resultados de alunas, dores de costura · aquecimento sem revelar o produto que está chegando · 4–5 pautas/semana entregues por escrito</div>
+          <div class="tgs"><span class="tg tg-c">conteúdo</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="wr">
+      <div class="wl">Semana 2<div class="wd">21–27 Abr</div></div>
+      <div class="wts">
+        <div class="t internal"><div class="ti">💌</div><div class="tc">
+          <div class="tt">Ação Interna #1 — 1.602 compradores únicos</div>
+          <div class="td">E-mail + WhatsApp segmentado por produto comprado · Escola de Formação MCF para quem comprou produto avulso · combo de nicho para quem tem Infantil ou Masculino separado · condição exclusiva de ex-aluna · prazo de 72h</div>
+          <div class="tgs"><span class="tg tg-i">ação interna</span><span class="tg tg-p">copy</span></div>
+        </div></div>
+        <div class="t content"><div class="ti">🎬</div><div class="tc">
+          <div class="tt">Janeisa grava — Módulos 1 e 2 (Setup + Saias)</div>
+          <div class="td">As primeiras aulas do Primeiros Passos MCF precisam estar gravadas antes do carrinho abrir em junho · gravar em sequência para publicar no Hotmart em maio</div>
+          <div class="tgs"><span class="tg tg-c">produção</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="wr">
+      <div class="wl">Semana 3<div class="wd">28 Abr–4 Mai</div></div>
+      <div class="wts">
+        <div class="t content"><div class="ti">🎬</div><div class="tc">
+          <div class="tt">Janeisa grava — Módulos 3, 4, 5 + bônus</div>
+          <div class="td">Blusas, vestidos, calças, short e módulo de expansão · ao final desta semana o curso está gravado · publicar na plataforma e testar o fluxo de compra completo</div>
+          <div class="tgs"><span class="tg tg-c">produção</span></div>
+        </div></div>
+        <div class="t copy"><div class="ti">✍️</div><div class="tc">
+          <div class="tt">Copy da página de vendas — Primeiros Passos MCF</div>
+          <div class="td">Revisão e finalização da página · headlines · preço R$ 697 · ancoragem · garantia · FAQ · CTA · seção do esquadro · mobile revisado</div>
+          <div class="tgs"><span class="tg tg-p">copy</span><span class="tg tg-l">lançamento</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="wr">
+      <div class="wl">Semana 4<div class="wd">5–11 Mai</div></div>
+      <div class="wts">
+        <div class="t mgmt"><div class="ti">🔧</div><div class="tc">
+          <div class="tt">Curso publicado no Hotmart + checkout configurado + envio de esquadro</div>
+          <div class="td">Publicar aulas · configurar produto R$ 697 + parcelamento 12x · configurar envio do esquadro no checkout · testar fluxo de compra completo · e-mail de boas-vindas automático</div>
+          <div class="tgs"><span class="tg tg-m">gestão</span><span class="tg tg-l">lançamento</span></div>
+        </div></div>
+        <div class="t traffic"><div class="ti">📡</div><div class="tc">
+          <div class="tt">Início da captação paga — leads para o lançamento (semana 1 de 4)</div>
+          <div class="td">Campanha Meta Ads de captação de leads · público QUENTE (seguidores, engajamento 30D) e FRIO (interesses costura + lookalike de compradores) · R$ 150–250/dia · objetivo: construir lista de espera para o carrinho de junho</div>
+          <div class="tgs"><span class="tg tg-t">captação</span><span class="tg tg-l">lançamento</span></div>
+        </div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ══ MÊS 1 — MAIO: AQUECIMENTO ══ -->
+<div class="ms m1">
+  <div class="mh">
+    <div class="mnum">01</div>
+    <div class="mhc">
+      <div class="mtag">Mês 1 · 12 Mai → 1 Jun 2026</div>
+      <h2 class="mh2">Aquecimento<br><em>e Captação.</em></h2>
+      <p class="mobj">Maio é o mês dos 45 dias de preparação. Captação intensiva de leads, aquecimento orgânico crescente e preparação de todos os materiais. O carrinho só abre quando o curso está pronto e o público está quente.</p>
+      <div class="mgmv">Fase de captação · sem carrinho aberto · INSS 13º 2ª parcela começa 25/Mai ✓</div>
+    </div>
+  </div>
+  <div class="mdiv"></div>
+  <div class="wc">
+
+    <div class="wr">
+      <div class="wl">Semana 5<div class="wd">12–18 Mai</div></div>
+      <div class="wts">
+        <div class="t traffic"><div class="ti">📡</div><div class="tc">
+          <div class="tt">Captação paga — semana 2/4 · otimização de criativos</div>
+          <div class="td">Analisar CPL dos primeiros 7 dias · pausar anúncios com CPC fora do benchmark · escalar criativos campeões · iniciar sequência de e-mails de nutrição para leads capturados · meta acumulada: 600–900 leads na lista</div>
+          <div class="tgs"><span class="tg tg-t">captação</span><span class="tg tg-l">lançamento</span></div>
+        </div></div>
+        <div class="t content"><div class="ti">🎬</div><div class="tc">
+          <div class="tt">Aquecimento orgânico — semana 1</div>
+          <div class="td">3–4 Reels: "por que você trava na modelagem" · "o que muda quando você tem o método certo" · depoimento de aluna · Stories com enquetes sobre dores de costura · sem revelar o produto ainda</div>
+          <div class="tgs"><span class="tg tg-c">conteúdo</span><span class="tg tg-l">aquecimento</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="wr">
+      <div class="wl">Semana 6<div class="wd">19–25 Mai</div></div>
+      <div class="wts">
+        <div class="t inss"><div class="ti">📅</div><div class="tc">
+          <div class="tt">⚡ Janela INSS — 2ª parcela do 13º começa a cair (a partir de 25/Mai)</div>
+          <div class="td">O público começa a receber o 13º do INSS. Aumentar orçamento de tráfego a partir daqui · criativos mais diretos sobre o produto · leads nessa semana entram com maior intenção de compra · ótimo momento para intensificar Stories</div>
+          <div class="tgs"><span class="tg tg-t">timing estratégico</span><span class="tg tg-l">INSS</span></div>
+        </div></div>
+        <div class="t traffic"><div class="ti">📡</div><div class="tc">
+          <div class="tt">Captação paga — semana 3/4 · escalar orçamento</div>
+          <div class="td">Semana pré-lançamento · aumentar para R$ 250–400/dia · criar conjunto de remarketing para visitantes da página de vendas · ativar lookalike dos compradores históricos da base Hotmart</div>
+          <div class="tgs"><span class="tg tg-t">captação</span><span class="tg tg-l">lançamento</span></div>
+        </div></div>
+        <div class="t content"><div class="ti">🎬</div><div class="tc">
+          <div class="tt">Aquecimento orgânico — semana 2</div>
+          <div class="td">Reels: mostrando o esquadro MCF · bastidores da preparação do curso · depoimento de aluna com peça pronta · Stories "algo está chegando para quem quer costurar sob medida"</div>
+          <div class="tgs"><span class="tg tg-c">conteúdo</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="wr">
+      <div class="wl">Semana 7<div class="wd">26 Mai–1 Jun</div></div>
+      <div class="wts">
+        <div class="t traffic"><div class="ti">📡</div><div class="tc">
+          <div class="tt">Captação paga — semana 4/4 · máxima intensidade pré-abertura</div>
+          <div class="td">Última semana de captação · R$ 300–500/dia · criativo de urgência "inscrições abrem segunda-feira" · e-mail de contagem regressiva para lista · WhatsApp broadcast para quem já demonstrou interesse · 13º do INSS já no bolso da maioria</div>
+          <div class="tgs"><span class="tg tg-t">captação</span><span class="tg tg-l">pré-lançamento</span></div>
+        </div></div>
+        <div class="t content"><div class="ti">🎬</div><div class="tc">
+          <div class="tt">Aquecimento final — urgência e revelação do produto</div>
+          <div class="td">Revelar o produto: Primeiros Passos MCF · Reels mostrando o esquadro físico · "a lista de espera está quase cheia" · CTA para entrar na lista antes da abertura · Stories diários com link</div>
+          <div class="tgs"><span class="tg tg-c">conteúdo</span><span class="tg tg-l">aquecimento</span></div>
+        </div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ══ MÊS 2 — JUNHO: LANÇAMENTO + PÓS ══ -->
+<div class="ms m2">
+  <div class="mh">
+    <div class="mnum">02</div>
+    <div class="mhc">
+      <div class="mtag">Mês 2 · 2 Jun → 30 Jun 2026</div>
+      <h2 class="mh2">Carrinho Aberto —<br><em>Primeiros Passos MCF.</em></h2>
+      <p class="mobj">O lançamento acontece na janela estratégica pós-13º do INSS. Após o fechamento: RMKT de não-compradores e reativação da base para o próximo ciclo.</p>
+      <div class="mgmv">🎯 Meta lançamento: R$ 80–100K · Ação pós: R$ 25–40K</div>
+    </div>
+  </div>
+  <div class="mdiv"></div>
+  <div class="wc">
+
+    <div class="wr">
+      <div class="wl" style="padding-top:13px">🚀 Abertura<div class="wd">2–5 Jun</div></div>
+      <div class="wts">
+        <div class="t launch"><div class="ti">🔓</div><div class="tc">
+          <div class="tt">CARRINHO ABERTO — Primeiros Passos MCF (3 dias)</div>
+          <div class="td">Abertura: terça 2/Jun · e-mail de abertura para lista completa · WhatsApp broadcast · Reels de CTA direto · Stories com link · campanha de conversão Meta Ads (remarketing de TODOS os leads dos 45 dias) · e-mail de urgência: quarta 3/Jun · e-mail de fechamento: quinta 4/Jun às 22h</div>
+          <div class="tgs"><span class="tg tg-l">lançamento</span><span class="tg tg-t">conversão</span><span class="tg tg-p">copy</span></div>
+        </div></div>
+        <div class="t inss"><div class="ti">📅</div><div class="tc">
+          <div class="tt">Janela INSS ativa — 13º já depositado + fatura virada</div>
+          <div class="td">2ª parcela do 13º concluída para maioria · fatura do cartão virou em 1/Jun na maioria dos bancos · poder de compra no pico · parcela de 12x no cartão: R$ 58/mês</div>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="wr">
+      <div class="wl">Semana 8<div class="wd">5–14 Jun</div></div>
+      <div class="wts">
+        <div class="t ms"><div class="ti">📦</div><div class="tc">
+          <div class="tt">Marco: envio do lote de esquadros MCF para alunas matriculadas</div>
+          <div class="td">Organizar envio físico · confirmar CEPs · prazo de entrega comunicado por e-mail · Stories das alunas recebendo o esquadro viram conteúdo orgânico espontâneo</div>
+        </div></div>
+        <div class="t internal"><div class="ti">🔄</div><div class="tc">
+          <div class="tt">Ação Interna #2 — RMKT dos não-compradores do lançamento</div>
+          <div class="td">E-mail + Meta Ads para quem entrou na lista mas não comprou · "última chance" com condição especial por 48h · mensagem personalizada por segmento · order bump: guia digital R$ 29</div>
+          <div class="tgs"><span class="tg tg-i">ação interna</span><span class="tg tg-t">rmkt</span></div>
+        </div></div>
+        <div class="t mgmt"><div class="ti">📈</div><div class="tc">
+          <div class="tt">Relatório do lançamento</div>
+          <div class="td">GMV final · CAC · ROAS · CPL dos 45 dias · taxa conversão lista → compra · entrega com recomendações para o próximo lançamento</div>
+          <div class="tgs"><span class="tg tg-m">gestão</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="wr">
+      <div class="wl">Semana 9<div class="wd">15–22 Jun</div></div>
+      <div class="wts">
+        <div class="t internal"><div class="ti">🎯</div><div class="tc">
+          <div class="tt">Ação Interna #3 — Reativação de compradores do vitalício e produtos avulsos</div>
+          <div class="td">E-mail segmentado para os 464 compradores do produto vitalício (2020–2022) que nunca migraram para a Escola de Formação MCF · oferta de acesso à Escola MCF como "continuação natural da jornada" · também ativa compradores de Blusas, Acabamentos e cursos avulsos que nunca fizeram a Formação principal · prazo de 5 dias</div>
+          <div class="tgs"><span class="tg tg-i">ação interna</span><span class="tg tg-p">copy</span></div>
+        </div></div>
+        <div class="t content"><div class="ti">📅</div><div class="tc">
+          <div class="tt">Calendário editorial Julho + pautas de interpretação</div>
+          <div class="td">Pautas voltadas ao tema "como interpretar um modelo" · como a Janeisa pensa antes de modelar · depoimentos de alunas do ISS · aquecimento natural para o combo de julho</div>
+          <div class="tgs"><span class="tg tg-c">conteúdo</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="wr">
+      <div class="wl">Semana 10<div class="wd">22–30 Jun</div></div>
+      <div class="wts">
+        <div class="t mgmt"><div class="ti">📊</div><div class="tc">
+          <div class="tt">Dashboard de gestão — métricas mensais ativo</div>
+          <div class="td">Montar dashboard recorrente com GMV, leads, conversão, CAC e ROAS por campanha · reunião mensal de análise com Janeisa · ajuste de estratégia para os próximos meses</div>
+          <div class="tgs"><span class="tg tg-m">gestão</span></div>
+        </div></div>
+        <div class="t copy"><div class="ti">✍️</div><div class="tc">
+          <div class="tt">Copy e página — Interpretação Sem Medo</div>
+          <div class="td">Finalizar página de vendas do combo ISS + Papo de Costureira · e-mail de abertura e fechamento · copy para stories · WhatsApp segmentado por produto já comprado</div>
+          <div class="tgs"><span class="tg tg-p">copy</span><span class="tg tg-l">prep.</span></div>
+        </div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ══ MÊS 3 — JULHO: INTERPRETAÇÃO SEM MEDO ══ -->
+<div class="ms m3">
+  <div class="mh">
+    <div class="mnum">03</div>
+    <div class="mhc">
+      <div class="mtag">Mês 3 · 1–31 Jul 2026</div>
+      <h2 class="mh2">Interpretação<br><em>Sem Medo.</em></h2>
+      <p class="mobj">Oferta exclusiva para alunas MCF. Alvo: os 1.152 compradores da Formação que nunca compraram nada mais. R$ 997. Histórico confirma: interpretação é o produto de maior ticket da Janeisa (R$ 343 em versão anterior).</p>
+      <div class="mgmv">🎯 Meta: R$ 80–120K · ação interna · sem tráfego frio para este produto</div>
+    </div>
+  </div>
+  <div class="mdiv"></div>
+  <div class="wc">
+
+    <div class="wr">
+      <div class="wl">Semana 11<div class="wd">1–7 Jul</div></div>
+      <div class="wts">
+        <div class="t internal"><div class="ti">📧</div><div class="tc">
+          <div class="tt">Ação Interna #4 — Lista de espera Interpretação Sem Medo</div>
+          <div class="td">E-mail para 1.152 compradores da Formação que nunca compraram mais nada · WhatsApp para grupos ativos · "algo especial chegando para alunas MCF" · capturar quem abre e clica · meta: 250–350 na lista de espera</div>
+          <div class="tgs"><span class="tg tg-i">ação interna</span><span class="tg tg-p">copy</span></div>
+        </div></div>
+        <div class="t content"><div class="ti">🎬</div><div class="tc">
+          <div class="tt">Conteúdo de aquecimento — Interpretação</div>
+          <div class="td">Reels: "como olhar para uma foto e criar um molde" · bastidores do Papo de Costureira · depoimentos de alunas que já fizeram ISS · interpretação como o próximo nível para quem tem a base</div>
+          <div class="tgs"><span class="tg tg-c">conteúdo</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="wr">
+      <div class="wl" style="padding-top:13px">🚀 Abertura<div class="wd">7–11 Jul</div></div>
+      <div class="wts">
+        <div class="t launch"><div class="ti">🔓</div><div class="tc">
+          <div class="tt">CARRINHO ABERTO — Interpretação Sem Medo (5 dias)</div>
+          <div class="td">Abertura exclusiva para lista de espera: terça 7/Jul · R$ 997 (âncora R$ 1.297) · e-mail diário · WhatsApp broadcast · Reels de CTA + Stories com contagem regressiva · fechamento: sábado 11/Jul às 23h59</div>
+          <div class="tgs"><span class="tg tg-l">lançamento</span><span class="tg tg-i">exclusivo alunas</span><span class="tg tg-p">copy</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="wr">
+      <div class="wl">Semana 12<div class="wd">13–19 Jul</div></div>
+      <div class="wts">
+        <div class="t internal"><div class="ti">🔄</div><div class="tc">
+          <div class="tt">RMKT — não-compradores do combo</div>
+          <div class="td">E-mail de última chance para quem abriu mas não comprou · 48h · mensagem personalizada por segmento</div>
+          <div class="tgs"><span class="tg tg-i">rmkt</span></div>
+        </div></div>
+        <div class="t mgmt"><div class="ti">📈</div><div class="tc">
+          <div class="tt">Análise de resultados + relatório mês 3</div>
+          <div class="td">Taxa de conversão base vs lista de espera · segmentos que mais converteram · recomendações para ajuste do lançamento de agosto · reunião de alinhamento com Janeisa</div>
+          <div class="tgs"><span class="tg tg-m">gestão</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="wr">
+      <div class="wl">Semana 13<div class="wd">20–25 Jul</div></div>
+      <div class="wts">
+        <div class="t traffic"><div class="ti">📡</div><div class="tc">
+          <div class="tt">Captação paga — leads para Escola de Formação MCF (semana 1/2)</div>
+          <div class="td">Início das campanhas de captação para o lançamento da Escola · públicos QUENTE + FRIO · criativos com depoimentos e transformações das alunas dos Primeiros Passos · R$ 150–250/dia</div>
+          <div class="tgs"><span class="tg tg-t">captação</span><span class="tg tg-l">prep. escola</span></div>
+        </div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ══ MÊS 4 — AGOSTO: ESCOLA DE FORMAÇÃO MCF ══ -->
+<div class="ms m4">
+  <div class="mh">
+    <div class="mnum">04</div>
+    <div class="mhc">
+      <div class="mtag">Mês 4 · 13–24 Jul 2026</div>
+      <h2 class="mh2">Escola de Formação MCF<br><em>+ Escola MCF.</em></h2>
+      <p class="mobj">O maior lançamento do semestre. Escola de Formação MCF com tráfego pago e RMKT de toda a base acumulada nos 4 meses. 45 dias após o fechamento dos Primeiros Passos — alunas recentes no pico de engajamento.</p>
+      <div class="mgmv">🎯 Meta: R$ 100–150K · tráfego pago + RMKT acumulado</div>
+    </div>
+  </div>
+  <div class="mdiv"></div>
+  <div class="wc">
+
+    <div class="wr">
+      <div class="wl">Semana 14<div class="wd">13–18 Jul</div></div>
+      <div class="wts">
+        <div class="t traffic"><div class="ti">📡</div><div class="tc">
+          <div class="tt">Captação paga — semana 2/3</div>
+          <div class="td">Otimizar anúncios com dados das semanas anteriores · testar novos criativos com depoimentos das alunas do lançamento de junho · escalar públicos com melhor CPL</div>
+          <div class="tgs"><span class="tg tg-t">captação</span><span class="tg tg-l">lançamento</span></div>
+        </div></div>
+        <div class="t internal"><div class="ti">📧</div><div class="tc">
+          <div class="tt">Aquecimento da base histórica — e-mail para toda a lista</div>
+          <div class="td">Sequência de aquecimento para compradores que nunca fizeram a Escola de Formação MCF · "o maior lançamento do ano está chegando" · segmentado por produto anterior</div>
+          <div class="tgs"><span class="tg tg-i">ação interna</span><span class="tg tg-p">copy</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="wr">
+      <div class="wl">Semana 15<div class="wd">19–24 Jul</div></div>
+      <div class="wts">
+        <div class="t traffic"><div class="ti">📡</div><div class="tc">
+          <div class="tt">Captação paga — semana 3/3 (final) · máxima intensidade</div>
+          <div class="td">R$ 400–600/dia · criativo de urgência · e-mail de pré-abertura · WhatsApp para leads capturados · preparar campanha de conversão com RMKT de todos os leads dos 4 meses</div>
+          <div class="tgs"><span class="tg tg-t">captação</span></div>
+        </div></div>
+        <div class="t launch"><div class="ti">🔓</div><div class="tc">
+          <div class="tt">🚀 CARRINHO ABERTO — Escola de Formação MCF (5 dias) · 19–23/Jul</div>
+          <div class="td">Abertura: segunda 19/Jul · e-mail para lista completa · WhatsApp broadcast · campanha de conversão Meta com RMKT de todos os leads acumulados · Stories ao vivo com depoimentos das alunas dos Primeiros Passos · fechamento: sexta 23/Jul às 22h</div>
+          <div class="tgs"><span class="tg tg-l">lançamento</span><span class="tg tg-t">conversão</span><span class="tg tg-p">copy</span></div>
+        </div></div>
+        <div class="t ms"><div class="ti">🏫</div><div class="tc">
+          <div class="tt">Marco: Lista de espera da Escola MCF aberta</div>
+          <div class="td">Concluintes dos Primeiros Passos (turma de junho) recebem convite durante o lançamento · progressão natural da jornada MCF</div>
+        </div></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- FUNNEL -->
+<div class="fn-sec">
+  <div style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--rose);margin-bottom:10px">Arquitetura de produtos</div>
+  <h2 style="font-family:var(--serif);font-size:clamp(22px,3.5vw,36px);font-weight:700;color:var(--ink);line-height:1.15;margin-bottom:4px">Funil dos <em style="font-style:italic;color:var(--rose)">4 meses.</em></h2>
+  <div class="fn">
+    <div class="fs f1">
+      <div class="fsl">Sempre ativo · perpétuo</div>
+      <div class="fsn">Produtos de Entrada</div>
+      <div class="fsp">R$ 37–97</div>
+      <div class="fsd">Minha 1ª Peça + cursos avulsos · tráfego frio todos os dias · novos compradores na base o tempo todo</div>
+      <div class="fsb">campanha perpétua</div>
+    </div>
+    <div class="fa">→</div>
+    <div class="fs f2">
+      <div class="fsl">Lançamento pago · 2–5/Jun</div>
+      <div class="fsn">Primeiros Passos MCF</div>
+      <div class="fsp">R$ 697</div>
+      <div class="fsd">45 dias de aquecimento · 3 dias carrinho · esquadro físico · janela INSS</div>
+      <div class="fsb">1 lançamento pago</div>
+    </div>
+    <div class="fa">→</div>
+    <div class="fs f3">
+      <div class="fsl">Ação interna · 7–11/Jul</div>
+      <div class="fsn">Interpretação Sem Medo</div>
+      <div class="fsp">R$ 997</div>
+      <div class="fsd">Exclusivo para alunas MCF · ISS + Papo de Costureira · 5 dias</div>
+      <div class="fsb">oferta exclusiva</div>
+    </div>
+    <div class="fa">→</div>
+    <div class="fs f4">
+      <div class="fsl">Maior lançamento · 19–23/Jul</div>
+      <div class="fsn">Escola de Formação MCF + Escola</div>
+      <div class="fsp">R$ 297–697 / R$ 997/ano</div>
+      <div class="fsd">Tráfego pago + RMKT 4 meses acumulado · lista de espera Escola MCF</div>
+      <div class="fsb">tráfego pago + rmkt</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- TOTALS -->
+<div class="tot">
+  <div style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.32);margin-bottom:20px">Projeção de faturamento — 4 meses</div>
+
+  <!-- 3 METAS -->
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:24px">
+
+    <!-- META BAIXA -->
+    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:24px 20px;text-align:center;border-top:3px solid rgba(255,255,255,.2)">
+      <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:12px">Meta Baixa</div>
+      <div style="font-family:var(--serif);font-size:36px;font-weight:700;color:rgba(255,255,255,.55);line-height:1;margin-bottom:16px">R$ 200K</div>
+      <div style="display:flex;flex-direction:column;gap:6px;text-align:left">
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.28);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.06)"><span>Primeiros Passos</span><span style="font-weight:600">R$ 50K</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.28);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.06)"><span>Interp. Sem Medo</span><span style="font-weight:600">R$ 60K</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.28);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.06)"><span>Escola de Formação</span><span style="font-weight:600">R$ 70K</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.28);padding:5px 0"><span>Ações internas + entrada</span><span style="font-weight:600">R$ 20K</span></div>
+      </div>
+    </div>
+
+    <!-- META NORMAL -->
+    <div style="background:rgba(192,123,132,.12);border:1px solid rgba(192,123,132,.35);border-radius:12px;padding:24px 20px;text-align:center;border-top:3px solid var(--rose);position:relative">
+      <div style="position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--rose);color:white;font-size:9px;font-weight:700;padding:3px 12px;border-radius:100px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap">Meta principal</div>
+      <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(192,123,132,.7);margin-bottom:12px">Meta Normal</div>
+      <div style="font-family:var(--serif);font-size:36px;font-weight:700;color:white;line-height:1;margin-bottom:16px">R$ 330K</div>
+      <div style="display:flex;flex-direction:column;gap:6px;text-align:left">
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.5);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.08)"><span>Primeiros Passos</span><span style="font-weight:600;color:white">R$ 85K</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.5);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.08)"><span>Interp. Sem Medo</span><span style="font-weight:600;color:white">R$ 90K</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.5);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.08)"><span>Escola de Formação</span><span style="font-weight:600;color:white">R$ 120K</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.5);padding:5px 0"><span>Ações internas + entrada</span><span style="font-weight:600;color:white">R$ 35K</span></div>
+      </div>
+    </div>
+
+    <!-- SUPER META -->
+    <div style="background:rgba(232,160,32,.08);border:1px solid rgba(232,160,32,.28);border-radius:12px;padding:24px 20px;text-align:center;border-top:3px solid var(--gold)">
+      <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(232,160,32,.65);margin-bottom:12px">Super Meta</div>
+      <div style="font-family:var(--serif);font-size:36px;font-weight:700;color:var(--gold);line-height:1;margin-bottom:16px">R$ 500K</div>
+      <div style="display:flex;flex-direction:column;gap:6px;text-align:left">
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:rgba(232,160,32,.5);padding:5px 0;border-bottom:1px solid rgba(232,160,32,.1)"><span>Primeiros Passos</span><span style="font-weight:600;color:var(--gold)">R$ 120K</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:rgba(232,160,32,.5);padding:5px 0;border-bottom:1px solid rgba(232,160,32,.1)"><span>Interp. Sem Medo</span><span style="font-weight:600;color:var(--gold)">R$ 130K</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:rgba(232,160,32,.5);padding:5px 0;border-bottom:1px solid rgba(232,160,32,.1)"><span>Escola de Formação</span><span style="font-weight:600;color:var(--gold)">R$ 200K</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:12px;color:rgba(232,160,32,.5);padding:5px 0"><span>Ações internas + entrada</span><span style="font-weight:600;color:var(--gold)">R$ 50K</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTEXTO DATAS -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:32px">
+    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:12px">
+      <div style="font-size:20px;flex-shrink:0">📅</div>
+      <div><div style="font-size:12px;font-weight:600;color:rgba(255,255,255,.65);margin-bottom:2px">Carrinho Primeiros Passos</div><div style="font-size:11px;color:rgba(255,255,255,.3)">2–5/Jun · janela estratégica INSS 13º</div></div>
+    </div>
+    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:12px">
+      <div style="font-size:20px;flex-shrink:0">📡</div>
+      <div><div style="font-size:12px;font-weight:600;color:rgba(255,255,255,.65);margin-bottom:2px">Tráfego frio perpétuo</div><div style="font-size:11px;color:rgba(255,255,255,.3)">R$ 30–50/dia · produtos de entrada · sempre ativo</div></div>
+    </div>
+  </div>
+  <div class="tc2">
+    <div class="modcard">
+      <div class="modtitle">Samuel / João Vitor — escopo</div>
+      <div class="mi"><div class="md" style="background:var(--rose)"></div><div><div class="mit">Gestão de tráfego Meta Ads</div><div class="mid">Tráfego frio perpétuo + captação paga dos lançamentos · todos os 4 meses</div></div></div>
+      <div class="mi"><div class="md" style="background:var(--rose)"></div><div><div class="mit">Copy completo</div><div class="mid">Páginas · e-mails · WhatsApp · scripts de stories · anúncios</div></div></div>
+      <div class="mi"><div class="md" style="background:var(--rose)"></div><div><div class="mit">Assessoria de conteúdo</div><div class="mid">Calendário editorial mensal · pautas semanais alinhadas aos lançamentos</div></div></div>
+      <div class="mi"><div class="md" style="background:var(--rose)"></div><div><div class="mit">Gestão e relatórios mensais</div><div class="mid">Dashboard de métricas · análise de performance · reunião de alinhamento mensal</div></div></div>
+    </div>
+    <div class="modcard">
+      <div class="modtitle">Instituto Janeisa Narciso — escopo</div>
+      <div class="mi"><div class="md" style="background:var(--gold)"></div><div><div class="mit">Verba de tráfego pago</div><div class="mid">Budget Meta Ads — ativo permanente · R$ 3–8K por lançamento + R$ 150–200/mês perpétuo</div></div></div>
+      <div class="mi"><div class="md" style="background:var(--gold)"></div><div><div class="mit">Gravação do curso em Abril</div><div class="mid">Primeiros Passos MCF gravado antes do carrinho abrir em junho</div></div></div>
+      <div class="mi"><div class="md" style="background:var(--gold)"></div><div><div class="mit">Envio dos esquadros MCF</div><div class="mid">Logística e custo de envio físico para alunas matriculadas</div></div></div>
+      <div class="mi"><div class="md" style="background:var(--gold)"></div><div><div class="mit">Gravação de conteúdo semanal</div><div class="mid">Reels e Stories conforme pautas entregues · Janeisa na câmera</div></div></div>
+    </div>
+  </div>
+  <div style="margin-top:20px;padding:18px 22px;background:rgba(255,255,255,.04);border-radius:10px;border:1px solid rgba(255,255,255,.07);font-size:13px;color:rgba(255,255,255,.38);line-height:1.8">
+    <strong style="color:rgba(255,255,255,.65)">Modelo comercial:</strong> Operação de validação de 4 meses · custos de tráfego (verba de anúncios Meta Ads) por conta do Instituto Janeisa Narciso — são ativos digitais permanentes da operação.
+  </div>
+  <div style="margin-top:24px;padding-top:18px;border-top:1px solid rgba(255,255,255,.07);font-size:12px;color:rgba(255,255,255,.18);text-align:center">
+    Plano elaborado por Samuel Matias e João Vitor Leal · 14 de abril de 2026 · Instituto Janeisa Narciso<br>
+    Baseado em análise de 15.387 transações Hotmart · Mar/2020–Abr/2026 · R$ 2,49M GMV histórico
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var t=document.querySelector(this.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'})}
+  });
+});
+</script>
+</body>
+</html>
